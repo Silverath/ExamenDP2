@@ -5,6 +5,7 @@ import java.util.Date;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -13,7 +14,11 @@ import javax.validation.Valid;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.Range;
+import org.hibernate.validator.constraints.SafeHtml;
+import org.hibernate.validator.constraints.SafeHtml.WhiteListType;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
@@ -29,6 +34,8 @@ public class Audit extends DomainEntity {
 
 
 	@NotNull
+	@SafeHtml(whitelistType = WhiteListType.NONE)
+	@Column(unique = true)
 	public String getTicker() {
 		return this.ticker;
 	}
@@ -57,6 +64,8 @@ public class Audit extends DomainEntity {
 	}
 
 	@NotBlank
+	@Length(min = 1, max = 250)
+	@SafeHtml(whitelistType = WhiteListType.NONE)
 	public String getTitle() {
 		return this.title;
 	}
@@ -66,6 +75,7 @@ public class Audit extends DomainEntity {
 	}
 
 	@NotNull
+	@Range(min = 1, max = 3)
 	public Integer getGauge() {
 		return this.gauge;
 	}
@@ -75,6 +85,8 @@ public class Audit extends DomainEntity {
 	}
 
 	@NotBlank
+	@SafeHtml(whitelistType = WhiteListType.NONE)
+	@Length(min = 1, max = 250)
 	public String getDescription() {
 		return this.description;
 	}

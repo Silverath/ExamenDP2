@@ -16,6 +16,6 @@ public interface AuditRepository extends JpaRepository<Audit, Integer> {
 	@Query("select a from Audit a where a.newspaper.id = ?1")
 	Collection<Audit> findAuditsByNewspaper(int newspaperId);
 
-	@Query("select a from Audit a where current_date >= a.moment")
+	@Query("select a from Audit a where current_date >= a.moment or a.moment = null")
 	Collection<Audit> findAllPublicated();
 }
