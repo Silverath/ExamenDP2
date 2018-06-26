@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles.xml
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+	<definition name="administrator/dashboard" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard.jsp" />
+	</definition>
+	
+	<definition name="administrator/dashboard1" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard1.jsp" />
+	</definition>
+	
+		<definition name="administrator/dashboard2" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard2.jsp" />
+	</definition>
+	
+		<definition name="administrator/dashboard3" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard3.jsp" />
+	</definition>
+	
+		<definition name="administrator/dashboard4" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard4.jsp" />
+	</definition>
+	
+		<definition name="administrator/dashboard5" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard5.jsp" />
+	</definition>
+	
+	<definition name="administrator/dashboard6" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard6.jsp" />
+	</definition>
+	
+	<definition name="administrator/dashboard7" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard7.jsp" />
+	</definition>
+	
+<definition name="administrator/dashboard8" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard8.jsp" />
+	</definition>
+ 	
+	<definition name="administrator/dashboard9" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard9.jsp" />
+	</definition>
+	
+	<definition name="administrator/dashboard10" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard10.jsp" />
+	</definition>
+	
+	<definition name="administrator/dashboard11" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard11.jsp" />
+	</definition>
+	
+		<definition name="administrator/dashboard12" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard12.jsp" />
+	</definition>
+		
+	<definition name="administrator/dashboard13" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard13.jsp" />
+	</definition>
+		
+		<definition name="administrator/dashboard14" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard14.jsp" />
+	</definition>
+		
+		<definition name="administrator/dashboard15" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard15.jsp" />
+	</definition>
+		
+		<definition name="administrator/dashboard16" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard16.jsp" />
+	</definition>
+		
+		<definition name="administrator/dashboard17" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard17.jsp" />
+	</definition> 
+	
+	<definition name="administrator/dashboard18" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard18.jsp" />
+	</definition> 
+	
+	<definition name="administrator/dashboard19" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard19.jsp" />
+	</definition> 
+	
+	<definition name="administrator/dashboard20" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard20.jsp" />
+	</definition> 
+	
+	<definition name="administrator/dashboard21" extends="master.page">	
+		<put-attribute name="title" value="Administrator: Dashboard" />
+		<put-attribute name="body" value="/views/administrator/dashboard21.jsp" />
+	</definition>
+	
+	<definition name="administrator/listTabooWord" extends="master.page">	
+		<put-attribute name="title" value="List of Taboo words" />
+		<put-attribute name="body" value="/views/administrator/listTabooWord.jsp" />
+	</definition> 
+	
+	<definition name="administrator/addTabooWord" extends="master.page">	
+		<put-attribute name="title" value="Add Taboo word" />
+		<put-attribute name="body" value="/views/administrator/addTabooWord.jsp" />
+	</definition> 
+	
+</tiles-definitions>

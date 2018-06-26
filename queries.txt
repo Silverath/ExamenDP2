@@ -1,0 +1,9 @@
+Query 1:
+
+select (count(t)*1.0)/(select count(x) from Audit x) from Newspaper t where (select count(w) from Audit w where w.news
+paper.id = t.id)>0;
+
+Query 2:
+
+select t.administrator from Audit t where (select count(w) from Audit w where w.administrator.id = t.administrator.id)
+>= all(select (select count(w2) from Audit w2 where w2.administrator.id = t2.administrator.id) from Audit t2);

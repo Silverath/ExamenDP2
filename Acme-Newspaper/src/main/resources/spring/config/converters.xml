@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd		
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd		
+	">
+
+	<util:list id="converters">
+		<bean class="converters.ActorToStringConverter"/>
+		<bean class="converters.StringToActorConverter"/>
+		
+		<bean class="converters.AdministratorToStringConverter"/>
+		<bean class="converters.StringToAdministratorConverter"/>
+		
+		<bean class="converters.ArticleToStringConverter"/>
+		<bean class="converters.StringToArticleConverter"/>
+		
+		<bean class="converters.ChirpToStringConverter"/>
+		<bean class="converters.StringToChirpConverter"/>
+		
+		<bean class="converters.ConfigurationToStringConverter"/>
+		<bean class="converters.StringToConfigurationConverter"/>
+		
+		
+		<bean class="converters.CustomerToStringConverter"/>
+		<bean class="converters.StringToCustomerConverter"/>
+		
+		<bean class="converters.FollowUpToStringConverter"/>
+		<bean class="converters.StringToFollowUpConverter"/>
+		
+		<bean class="converters.NewspaperToStringConverter"/>
+		<bean class="converters.StringToNewspaperConverter"/>
+		
+		<bean class="converters.AuditToStringConverter"/>
+		<bean class="converters.StringToAuditConverter"/>
+		
+		<bean class="converters.SubscriptionToStringConverter"/>
+		<bean class="converters.StringToSubscriptionConverter"/>
+		
+		<bean class="converters.UserToStringConverter"/>
+		<bean class="converters.StringToUserConverter"/>
+		
+		<bean class="converters.AuthorityToStringConverter"/>
+		<bean class="converters.StringToAuthorityConverter"/>
+		
+		<bean class="converters.AdvertisementToStringConverter"/>
+		<bean class="converters.StringToAdvertisementConverter"/>
+		
+		<bean class="converters.AgentToStringConverter"/>
+		<bean class="converters.StringToAgentConverter"/>
+		
+		<bean class="converters.VolumeToStringConverter"/>
+		<bean class="converters.StringToVolumeConverter"/>
+
+		<bean class="converters.MessageToStringConverter"/>
+		<bean class="converters.StringToMessageConverter"/>
+		
+		<bean class="converters.FolderToStringConverter"/>
+		<bean class="converters.StringToFolderConverter"/>
+		
+	</util:list>
+	
+</beans>
