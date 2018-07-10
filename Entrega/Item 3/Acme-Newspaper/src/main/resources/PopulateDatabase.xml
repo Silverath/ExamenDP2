@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- * PopulateDatabase.xml * * Copyright (C) 2017 Universidad de Sevilla 
+	* * The use of this project is hereby constrained to the conditions of the 
+	* TDG Licence, a copy of which you may download from * http://www.tdg-seville.info/License.html -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	">
+
+	<!-- User accounts -->
+
+	<bean id="userAccountAdmin" class="security.UserAccount">
+		<property name="username" value="admin" />
+		<property name="password" value="21232f297a57a5a743894a0e4a801fc3" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMIN" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	
+	<!-- Admin -->
+
+	<bean id="admin" class="domain.Administrator">
+		<property name="userAccount" ref="userAccountAdmin" />
+		<property name="name" value="admin 1" />
+		<property name="surname" value="surname admin 1" />
+		<property name="address" value="postal Adress admin 1" />
+		<property name="email" value="admin@acmenewspaper.com" />
+		<property name="phone" value="+34617557203" />
+		<property name="folder">
+			<list>
+				<ref bean="folderInBox1" />
+				<ref bean="folderOutBox1" />
+				<ref bean="folderTrashBox1" />
+				<ref bean="folderSpamBox1" />
+				<ref bean="folderNotificationBox1" />
+			</list>
+		</property>
+		<property name="messageSend">
+			<list>
+			</list>
+		</property>
+		<property name="messageReceived">
+		<list>
+			</list>
+		</property>
+	</bean>
+	
+		<!-- Configuration System -->
+
+	<bean id="configuration" class="domain.Configuration">
+		<property name="taboo">
+			<list>
+				<value>sex</value>
+				<value>cialis</value>
+				<value>sexo</value>
+				<value>viagra</value>
+			</list>
+		</property>
+	</bean>
+	<!-- Folder -->
+	<bean id="folderInBox1" class="domain.Folder">
+		<property name="name" value="InBox" />
+		<property name="modify" value="true" />
+		<property name="message">
+			<list>
+			</list>
+		</property>
+		<property name="actor" ref="admin" />
+	</bean>
+	<bean id="folderOutBox1" class="domain.Folder">
+		<property name="name" value="OutBox" />
+		<property name="modify" value="true" />
+		<property name="message">
+			<list />
+		</property>
+		<property name="actor" ref="admin" />
+	</bean>
+	<bean id="folderTrashBox1" class="domain.Folder">
+		<property name="name" value="TrashBox" />
+		<property name="modify" value="true" />
+		<property name="message">
+			<list />
+		</property>
+		<property name="actor" ref="admin" />
+	</bean>
+	<bean id="folderSpamBox1" class="domain.Folder">
+		<property name="name" value="SpamBox" />
+		<property name="modify" value="true" />
+		<property name="message">
+			<list />
+		</property>
+		<property name="actor" ref="admin" />
+	</bean>
+	<bean id="folderNotificationBox1" class="domain.Folder">
+		<property name="name" value="NotificationBox" />
+		<property name="modify" value="true" />
+		<property name="message">
+			<list />
+		</property>
+		<property name="actor" ref="admin" />
+	</bean>
+	
+	
+</beans>
+
+	

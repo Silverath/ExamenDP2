@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles_es.xml
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+      
+<tiles-definitions>
+
+
+<definition extends="master.page" name="message/edit">
+<put-attribute name="title" value="Editar mensaje"/>
+<put-attribute name="body" value="/views/message/edit.jsp"/>
+</definition>
+
+
+<definition extends="master.page" name="message/list">
+<put-attribute name="title" value="Lista de carpetas"/>
+<put-attribute name="body" value="/views/message/list.jsp"/>
+</definition>
+
+
+<definition extends="master.page" name="message/listByFolder">
+<put-attribute name="title" value="Contenido de la carpeta"/>
+<put-attribute name="body" value="/views/message/list.jsp"/>
+</definition>
+
+
+<definition extends="master.page" name="message/create">
+<put-attribute name="title" value="Crear mensaje"/>
+<put-attribute name="body" value="/views/message/edit.jsp"/>
+</definition>
+
+<definition extends="master.page" name="message/createBroadcast">
+<put-attribute name="title" value="Crear mensaje broadcast"/>
+<put-attribute name="body" value="/views/message/editBroadcast.jsp"/>
+</definition>
+
+<definition extends="master.page" name="message/editBroadcast">
+<put-attribute name="title" value="Crear mensaje broadcast"/>
+<put-attribute name="body" value="/views/message/editBroadcast.jsp"/>
+</definition>
+
+<definition extends="master.page" name="message/reply">
+<put-attribute name="title" value="Responder mensaje"/>
+<put-attribute name="body" value="/views/message/edit.jsp"/>
+</definition>
+
+
+<definition extends="master.page" name="message/move">
+<put-attribute name="title" value="Mover mensaje"/>
+<put-attribute name="body" value="/views/message/editFolder.jsp"/>
+</definition>
+	
+</tiles-definitions>

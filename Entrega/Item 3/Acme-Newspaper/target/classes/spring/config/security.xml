@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- * security.xml * * Copyright (C) 2017 Universidad de Sevilla * * The 
+	use of this project is hereby constrained to the conditions of the * TDG 
+	Licence, a copy of which you may download from * http://www.tdg-seville.info/License.html -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd		
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+    ">
+
+	<!-- Security infrastructure -->
+
+	<bean id="loginService" class="security.LoginService" />
+
+	<bean id="passwordEncoder"
+		class="org.springframework.security.authentication.encoding.Md5PasswordEncoder" />
+
+	<!-- Access control -->
+
+	<security:http auto-config="true" use-expressions="true">
+		<security:intercept-url pattern="/" access="permitAll" />
+
+		<security:intercept-url pattern="/favicon.ico"
+			access="permitAll" />
+		<security:intercept-url pattern="/images/**"
+			access="permitAll" />
+		<security:intercept-url pattern="/scripts/**"
+			access="permitAll" />
+		<security:intercept-url pattern="/styles/**"
+			access="permitAll" />
+
+		<security:intercept-url pattern="/views/misc/index.jsp"
+			access="permitAll" />
+
+		<security:intercept-url pattern="/security/login.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/security/loginFailure.do"
+			access="permitAll" />
+
+		<security:intercept-url pattern="/welcome/index.do"
+			access="permitAll" />
+
+		<security:intercept-url pattern="/administrator/dashboard.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard1.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard2.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard3.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard4.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard5.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard6.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard7.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard8.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard9.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard10.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard11.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard12.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard13.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard14.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard15.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard16.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard17.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard18.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard19.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard20.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/dashboard21.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/listTabooWord.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/addTabooWord.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/listTabooArticles.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/listTabooNewspapers.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/administrator/listTabooChirps.do"
+			access="hasRole('ADMIN')" />
+
+		<security:intercept-url pattern="/actor/register.do"
+			access="permitAll" />
+
+		<!-- <security:intercept-url pattern="/customer/action-1.do" access="hasRole('CUSTOMER')" 
+			/> <security:intercept-url pattern="/customer/action-2.do" access="hasRole('CUSTOMER')" 
+			/> -->
+
+		<security:intercept-url pattern="/profile/action-1.do"
+			access="isAuthenticated()" />
+		<security:intercept-url pattern="/profile/action-2.do"
+			access="isAuthenticated()" />
+		<security:intercept-url pattern="/profile/action-3.do"
+			access="isAuthenticated()" />
+
+		<security:intercept-url pattern="/terms/terms.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/terms/cookies.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/terms/privacy.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/follow/**"
+			access="hasRole('USER')" />
+
+
+		<security:intercept-url access="isAuthenticated()"
+			pattern="/message/**" />
+		<security:intercept-url pattern="/message/createBroadcast.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/message/editBroadcast.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url access="isAuthenticated()"
+			pattern="/folder/**" />
+
+		<security:intercept-url pattern="/subscription/edit.do"
+			access="hasRole('CUSTOMER')" />
+		<security:intercept-url pattern="/subscription/create.do"
+			access="hasRole('CUSTOMER')" />
+		<security:intercept-url pattern="/subscription/list.do"
+			access="hasRole('CUSTOMER')" />
+
+
+		<security:intercept-url pattern="/user/list.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/molet/list.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/user/listArticles.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/user/display.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/user/follow.do"
+			access="hasRole('USER')" />
+
+		<security:intercept-url pattern="/volume/list.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/volume/listNewspapers.do"
+			access="permitAll" />
+
+		<security:intercept-url pattern="/subscription/subscribeVolume.do"
+			access="hasRole('CUSTOMER')" />
+		<security:intercept-url pattern="/subscription/editSubscribeVolume.do"
+			access="hasRole('CUSTOMER')" />
+		<security:intercept-url pattern="/newspaper/listVolumeNewspapersSubscribed.do"
+			access="hasRole('CUSTOMER')" />
+
+
+		<security:intercept-url pattern="/volume/edit.do" access="hasRole('USER')" /> 
+		<security:intercept-url pattern="/volume/editNews.do" access="hasRole('USER')" /> 
+		<security:intercept-url pattern="/volume/add.do" access="hasRole('USER')" /> 
+		<security:intercept-url pattern="/volume/addNews.do" access="hasRole('USER')" /> 
+		<security:intercept-url pattern="/volume/remove.do" access="hasRole('USER')" /> 
+		<security:intercept-url pattern="/volume/removeNews.do" access="hasRole('USER')" /> 
+		<security:intercept-url pattern="/volume/create.do" access="hasRole('USER')" /> 
+		
+		<security:intercept-url pattern="/newspaper/list.do" access="permitAll" />
+		<security:intercept-url pattern="/newspaper/listArticles.do" access="permitAll" />
+		<security:intercept-url pattern="/newspaper/associatedMolets.do" access="permitAll" />
+		<security:intercept-url pattern="/newspaper/edit.do" access="hasRole('ADMIN') || hasRole('USER')" /> 
+		<security:intercept-url pattern="/newspaper/create.do" access="hasRole('USER')" /> 
+		<security:intercept-url pattern="/newspaper/listSearch.do" access="permitAll" /> 
+		<security:intercept-url pattern="/newspaper/search.do" access="permitAll" /> 
+		<security:intercept-url pattern="/newspaper/listPublish.do" access="hasRole('USER')" /> 
+		<security:intercept-url pattern="/newspaper/publish.do" access="hasRole('USER')" /> 
+		<security:intercept-url pattern="/newspaper/makePrivate.do" access="hasRole('USER')" /> 
+		<security:intercept-url pattern="/newspaper/makePublic.do" access="hasRole('USER')" /> 
+		<security:intercept-url pattern="/newspaper/display.do" access="permitAll" /> 
+		<security:intercept-url pattern="/newspaper/delete.do" access="hasRole('ADMIN')" /> 
+		<security:intercept-url pattern="/molet/delete.do" access="hasRole('ADMIN')" /> 
+		<security:intercept-url pattern="/molet/create.do" access="hasRole('ADMIN')" /> 
+		<security:intercept-url pattern="/molet/edit.do" access="hasRole('ADMIN')" /> 
+		<security:intercept-url pattern="/molet/listMine.do" access="hasRole('ADMIN')" /> 
+		<security:intercept-url pattern="/molet/selectNewspaper.do" access="hasRole('ADMIN')" /> 
+		<security:intercept-url pattern="/newspaper/listAdvertisements.do" access="hasRole('AGENT')" /> 
+		<security:intercept-url pattern="/newspaper/listWithoutAdvertisements.do" access="hasRole('AGENT')" />
+		
+
+
+		<security:intercept-url pattern="/article/list.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/article/create.do"
+			access="hasRole('USER')" />
+		<security:intercept-url pattern="/article/display.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/article/listSearch.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/article/search.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/article/edit.do"
+			access="hasRole('ADMIN') or hasRole('USER')" />
+		<security:intercept-url pattern="/article/delete.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/article/displayUser.do"
+			access="hasRole('USER')" />
+		<security:intercept-url pattern="/article/user/**"
+			access="hasRole('USER')" />
+
+		<security:intercept-url pattern="/chirp/list.do"
+			access="hasRole('USER') or hasRole('ADMIN')" />
+		<security:intercept-url pattern="/chirp/create.do"
+			access="hasRole('USER')" />
+		<security:intercept-url pattern="/chirp/edit.do"
+			access="hasRole('USER') or hasRole('ADMIN')" />
+		<security:intercept-url pattern="/chirp/deleteAdmin.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/chirp/listChirpsPostedByMyFollows.do"
+			access="hasRole('USER')" />
+
+		<security:intercept-url pattern="/advertisement/listTaboo.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/advertisement/list.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/advertisement/deleteAdmin.do"
+			access="hasRole('ADMIN')" />
+			<security:intercept-url pattern="/advertisement/deleteAdminTaboo.do"
+			access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/advertisement/create.do"
+			access="hasRole('AGENT')" />
+		<security:intercept-url pattern="/advertisement/edit.do"
+			access="hasRole('AGENT')" />
+
+		<security:intercept-url pattern="/**"
+			access="hasRole('NONE')" />
+
+		<security:form-login login-page="/security/login.do"
+			password-parameter="password" username-parameter="username"
+			authentication-failure-url="/security/loginFailure.do" />
+
+		<security:logout logout-success-url="/"
+			invalidate-session="true" />
+	</security:http>
+
+</beans>

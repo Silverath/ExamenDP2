@@ -1,0 +1,10 @@
+#./src/main/resources/Entities.map
+#Tue Jun 26 18:30:28 CEST 2018
+admin=10
+folderSpamBox1=15
+userAccountAdmin=9
+folderTrashBox1=14
+folderOutBox1=13
+folderInBox1=12
+folderNotificationBox1=16
+configuration=11

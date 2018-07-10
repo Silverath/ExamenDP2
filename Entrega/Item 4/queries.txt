@@ -1,0 +1,8 @@
+Query 1:
+
+select (count(t)*1.0)/(select count(x) from Molet x) from Newspaper t where (select count(w) from Molet w where w.newspaper.id = t.id)>0;
+
+Query 2:
+
+select t.administrator from Molet t where (select count(w) from Molet w where w.administrator.id = t.administrator.id)
+>= all(select (select count(w2) from Molet w2 where w2.administrator.id = t2.administrator.id) from Molet t2);

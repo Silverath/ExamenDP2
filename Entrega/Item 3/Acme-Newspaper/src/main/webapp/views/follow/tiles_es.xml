@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+	<definition name="follow/listFollow" extends="master.page">	
+		<put-attribute name="title" value="Lista de seguidos" />
+		<put-attribute name="body" value="/views/follow/listFollow.jsp" />
+	</definition>
+	
+	<definition name="follow/listFollower" extends="master.page">	
+		<put-attribute name="title" value="Lista de seguidores" />
+		<put-attribute name="body" value="/views/follow/listFollower.jsp" />
+	</definition>
+	
+</tiles-definitions>
